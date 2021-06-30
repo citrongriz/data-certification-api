@@ -112,7 +112,7 @@ def prediction():
 	popularity = loaded_model.predict(d)
 	dico = {"artist": artist,"name": name,"popularity": popularity}
 	return app.response_class(
-		response = json.dumps(dico)
+		response = json.dumps(dico),
 		status = 200,
 		mimetype = 'applicaation/json'
 		)
